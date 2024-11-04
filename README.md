@@ -11,11 +11,11 @@ https://onlinelibrary.wiley.com/doi/10.1002/mrm.29656
 ## MATLAB Implementation
 A MATLAB version of this implementation is also available on:
 https://github.com/EfeIlicak/DMD_Lung/
-```
+
 
 ## Reference
 You are encouraged to modify/distribute this code. However, please acknowledge this code and cite the paper appropriately. 
-
+```
 @article{https://doi.org/10.1002/mrm.29656,
 author = {Ilicak, Efe and Ozdemir, Safa and Zapp, Jascha and Schad, Lothar R. and Zöllner, Frank G.},
 title = {Dynamic mode decomposition of dynamic MRI for assessment of pulmonary ventilation and perfusion},
