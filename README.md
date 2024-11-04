@@ -1,4 +1,4 @@
-# DMD Lung Python
+# Dynamic Mode Decomposition of Dynamic MRI for Assessment of Pulmonary Ventilation and Perfusion
 A Python implementation of the "Dynamic Mode Decomposition of Dynamic MRI for Assessment of Pulmonary Ventilation and Perfusion"
 This repository provides tools to analyze pulmonary ventilation and perfusion using Dynamic Mode Decomposition (DMD) applied to dynamic MRI data using Elastix Registration.
 
