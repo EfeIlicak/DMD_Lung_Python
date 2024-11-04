@@ -3,9 +3,7 @@ The Python implementation of the "Dynamic mode decomposition of dynamic MRI for 
 
 This technique is described in the following paper:
 
-Ilicak E, Ozdemir S, Zapp J, Schad LR, Zöllner FG. Dynamic mode decomposition of dynamic MRI for assessment of pulmonary ventilation and perfusion. Magn Reson Med. 2023; 90: 761-769. doi: 10.1002/mrm.29656 
-
-[Paper](https://onlinelibrary.wiley.com/doi/10.1002/mrm.29656)
+Ilicak E, Ozdemir S, Zapp J, Schad LR, Zöllner FG. Dynamic mode decomposition of dynamic MRI for assessment of pulmonary ventilation and perfusion. Magn Reson Med. 2023; 90: 761-769. doi: 10.1002/mrm.29656 [Open Access Paper](https://onlinelibrary.wiley.com/doi/10.1002/mrm.29656)
 
 This repository provides tools to analyze pulmonary ventilation and perfusion using Dynamic Mode Decomposition (DMD) applied to dynamic MRI data using [Elastix](https://github.com/InsightSoftwareConsortium/ITKElastix) registration. 
 
