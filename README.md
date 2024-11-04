@@ -1,2 +1,3 @@
-# DMD_Lung_Python
-Python Implementation of DMD Lung
+# DMD Lung Python
+Python Implementation of the "Dynamic Mode Decomposition of Dynamic MRI for Assessment of Pulmonary Ventilation and Perfusion"
+
