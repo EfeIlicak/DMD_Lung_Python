@@ -217,3 +217,32 @@ def reg_lung_elastix_numpy(img):
     #     h5f.create_dataset('Fs', data=Fs)
                 
     return truncated_img_reg #return the registered image
+
+
+def reg_lung_elastix_noSave():
+    # Call the read_dicom_folder function to read a folder containing DICOM files
+    Fs, _, dicom_array, dicom_metadata, dicom_alldata, dicom_folder_path = read_dicom_folder.main()
+    
+    # Normalize the images
+    norm_img = normalize_images(dicom_array[10:,:,:]) # Discard the first 10 frames due to transient effects and normalize the set of images
+
+    # Create a minimum intensity projection image
+    mIP = np.min(norm_img,0)
+    # plt.imshow(mIP, cmap='gray') # Display the minimum intensity projection image
+
+    r = cv2.selectROI("select the area", mIP)     
+
+    # Crop images
+    cropped_image = norm_img[:,int(r[1]):int(r[1]+r[3]),int(r[0]):int(r[0]+r[2])] 
+
+    # Convert the normalized image to an ITK image
+    images = itk.GetImageFromArray(cropped_image) 
+   #  masks = itk.GetImageFromArray(np.tile(mask,(norm_img.shape[0],1,1)))
+    cv2.destroyAllWindows()
+
+    print("Starting Elastix registration...")
+    img_reg = elastix_reg_slice(images) # Target slice registration
+    truncated_img_reg = np.asarray(img_reg).astype(np.float64)
+  
+
+    return truncated_img_reg, Fs, dicom_folder_path, dicom_metadata, cropped_image #return the registered image
