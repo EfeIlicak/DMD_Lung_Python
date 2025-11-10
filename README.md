@@ -7,6 +7,11 @@ Ilicak E, Ozdemir S, Zapp J, Schad LR, Zöllner FG. Dynamic mode decomposition o
 
 This repository provides tools to analyze pulmonary ventilation and perfusion using Dynamic Mode Decomposition (DMD) applied to dynamic MRI data together with [Elastix registration](https://github.com/InsightSoftwareConsortium/ITKElastix). 
 
+## NEW! ##
+Added a new script for automatically doing DMD with updated functional map descriptions. 
+For the code, please see: 
+_demo_dmd_lung_auto.py_
+
 ## MATLAB Implementation
 The MATLAB implementation is also available on:
 https://github.com/EfeIlicak/DMD_Lung/
