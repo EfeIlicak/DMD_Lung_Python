@@ -29,7 +29,7 @@ VMAX = 0.4 # Ventilation max
 QMAX = 0.4 # Perfusion max
 
 ### Load DICOM folder and Register Images via Elastix ###
-img_reg, Fs, dicom_folder_path, dicom_metadata, cropped_image, norm_img = reg_lung_elastix_noSave()
+img_reg, Fs, dicom_folder_path, dicom_metadata, cropped_image = reg_lung_elastix_noSave()
 
 dt = 1 / Fs
 img_reg = img_reg.transpose(1,2,0) # Set the temporal dimension to last
