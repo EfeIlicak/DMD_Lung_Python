@@ -1,0 +1,78 @@
+// *********************
+// * ImageTypes
+// *********************
+(FixedInternalImagePixelType "float")
+(FixedImageDimension 3)
+(MovingInternalImagePixelType "float")
+(MovingImageDimension 3)
+
+// *********************
+// * Components
+// *********************
+(Registration "MultiResolutionRegistration" )
+(FixedImagePyramid "FixedSmoothingImagePyramid")
+(MovingImagePyramid "MovingSmoothingImagePyramid")
+(Interpolator "ReducedDimensionBSplineInterpolator")
+(BSplineInterpolationOrder 1)
+(Metric "VarianceOverLastDimensionMetric")
+(Optimizer "AdaptiveStochasticGradientDescent")
+(ResampleInterpolator "FinalLinearInterpolator")
+(Resampler "DefaultResampler")
+(Transform "BSplineTransform")
+
+
+// *********************
+// * Metric settings
+// *********************
+(MovingImageDerivativeScales 1.0 1.0 0.0)
+(SampleLastDimensionRandomly "true")
+(NumSamplesLastDimension 10)
+(SubtractMean "true")
+
+// *********************
+// * Optimizer settings
+// *********************
+(NumberOfSamplesForExactGradient 20000)
+(NumberOfResolutions 4)
+(FinalGridSpacingInPhysicalUnits 8.0 4.0 2.0 1.0)
+(GridSpacingSchedule 5.0 5.0 5.0 4.0 4.0 4.0 2.0 2.0 2.0 1.0 1.0 1.0)
+(MaximumNumberOfIterations 250)
+(SigmoidInitialTime 1.0)
+(AutomaticParameterEstimation "true")
+(UseCyclicTransform "true")
+// *********************
+// * Mask settings
+// *********************
+(ErodeMask "false")
+(ErodeFixedMask "false")
+
+// *********************
+// * Transform settings
+// *********************
+(HowToCombineTransforms "Compose" )
+
+// *********************
+// * Pyramid settings
+// *********************
+(FixedImagePyramidSchedule 0 0 0 0 0 0 0 0 0 0 0 0)
+(MovingImagePyramidSchedule 8 8 0 4 4 0 2 2 0 1 1 0)
+
+// *********************
+// * Sampler parameters
+// *********************
+(ImageSampler "Random")
+(NumberOfSpatialSamples 6400)
+(CheckNumberOfSamples "true")
+(MaximumNumberOfSamplingAttempts 10)
+(NewSamplesEveryIteration "true")
+
+// *********************
+// * Output settings
+// *********************
+(WriteTransformParametersEachIteration "false" )
+(WriteResultImage "true" )
+(CompressResultImage "false" )
+(WriteResultImageAfterEachResolution "false" )
+(ShowExactMetricValue "false" )
+//Default pixel value for pixels that come from outside the picture:
+(DefaultPixelValue 0)
